@@ -85,6 +85,9 @@ def file_upload():
                 sql.close()
                 mes="upload file '"+rawFileName +"' with success"
         return mes
+    else:
+        return "cookie with error"
+
         
 
 
@@ -97,7 +100,7 @@ def signIn():
         user_password=form.get('user_password')
         print(user_name)
         print(user_password)
-        if user_name == 'admin' and user_password =='domore0325':
+        if user_name == 'admin' and user_password =='123456':
             response=make_response(redirect('/admin'))
             response.set_cookie('username','admin')
             return response
@@ -124,7 +127,7 @@ if __name__=="__main__":
     # 创建新线程
     thread1 = myThread()
     thread1.start()
-    app.run(host='0.0.0.0',debug=True,threaded=True,port=8080)
+    app.run(host='0.0.0.0',threaded=True,port=8080)
 # thread2.start()
     # if beforeStart():
     #     
