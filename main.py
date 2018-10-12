@@ -52,6 +52,7 @@ def admin():
         # print(seconds)
         # updateTime=time.strftime("%Y-%m-%d %H:%M:%S",seconds) 
         updateTime=time.strftime("%Y-%m-%d", time.gmtime(item[1]))
+        perMes={}
         perMes['time']=updateTime
         perMes['quantity']=item[0]
         quantityMes.append(perMes)
